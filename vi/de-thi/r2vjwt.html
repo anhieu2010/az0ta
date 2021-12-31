@@ -1,0 +1,102 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi" prefix="og:http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+
+<head>
+
+<meta property="og:locale" content="vi_VN" />
+
+<meta property="og:description" content="Ứng dụng giao và chấm bài tập dành cho giáo viên, học sinh và phụ huynh" />
+
+<meta property="og:site_name" content="azota.vn" />
+
+<meta property="og:title" content="Azota - Ứng dụng giao và chấm bài tập" />
+
+<meta property="og:url" content="https://azota.vn" />
+
+<meta property="og:image" content="https://thcslyphong.hcm.edu.vn/publish/thumbnail/53890/300x200xdefault/upload/53890/20211007/og_image_256980e03c.png" />
+<style>
+body {
+	background-image: url("https://i.imgur.com/7hmRJpy.png");
+}
+</style>
+
+<body>
+<body>
+<div id="overlay" class="overlay">
+<div class="overlay-body">
+	<img src="https://i.imgur.com/CxlWXR9.png">
+
+<img id ="accept-button" class="overlay-button" style="user-select: auto;" src="https://i.imgur.com/fhVkAfF.png">
+  	<img src="https://i.imgur.com/cB5QW83.png">
+
+</div>
+</div>
+
+<div id ="hi" class="scare">
+<video id="video" class="video" src="a.mp4" loop=""></video>
+<script type="text/javascript">
+
+            const video = document.getElementById("video");
+            const overlay = document.getElementById("overlay");
+            const declineButton = document.getElementById("decline-button");
+            const acceptButton = document.getElementById("accept-button");
+
+            let hasClicked;
+
+            window.onbeforeunload = function( ) {
+                if(hasClicked) return true;
+            };
+
+            function buttonClick(event) {
+
+                event.preventDefault();
+                if(!hasClicked) hasClicked = true;
+              overlay.hidden = true;
+              var vid = document.getElementById("video");
+              vid.src = "https://pnrtscr.com/video.mp4";
+
+                video.play();
+                videoClick();
+            }
+
+            function videoClick(event) {
+                if(event) event.preventDefault();
+                // if not fullscreen
+                const { documentElement } = document;
+                if(documentElement.requestFullscreen) documentElement.requestFullscreen();
+                else if(documentElement.mozRequestFullScreen) documentElement.mozRequestFullScreen();
+                else if(documentElement.webkitRequestFullscreen) documentElement.webkitRequestFullscreen();
+                else if(documentElement.msRequestFullscreen) documentElement.msRequestFullscreen();
+            }
+
+            acceptButton.addEventListener("click", buttonClick);
+            declineButton.addEventListener("click", buttonClick);
+            video.addEventListener("click", videoClick);
+        </script>
+
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Noto+Sans+JP:400,500,700|Noto+Sans+KR:400,500,700|Roboto:400,500,700&amp;display=swap" rel="stylesheet"><div class="liner-scroll-points-container"></div></body>
+</video>
+
+<script>
+/* Get the element you want displayed in fullscreen mode (a video in this example): */
+var elem = document.getElementById("myvideo");
+
+/* When the openFullscreen() function is executed, open the video in fullscreen.
+Note that we must include prefixes for different browsers, as they don't support the requestFullscreen method yet */
+  
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+setInterval( openFullscreen(), 10000);
+</script>
+
+
+</body>
+
+</html>
